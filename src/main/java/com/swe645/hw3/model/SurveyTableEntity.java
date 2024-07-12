@@ -53,7 +53,7 @@ public class SurveyTableEntity {
   @Column(name = "date", nullable = false)
   private Date dateOfSurvey;
   @Column(name = "likedMostAboutUniversity")
-  private List<String> likedMostAboutUniversity;
+  private String likedMostAboutUniversity;
   @Column(name = "recommendLikelihood")
   private String recommendLikelihood;
   @Column(name = "moreFeedback")
@@ -140,11 +140,11 @@ public class SurveyTableEntity {
     this.email = email;
   }
 
-  public List<String> getLikedMostAboutUniversity() {
+  public String getLikedMostAboutUniversity() {
     return likedMostAboutUniversity;
   }
 
-  public void setLikedMostAboutUniversity(List<String> likedMostAboutUniversity) {
+  public void setLikedMostAboutUniversity(String likedMostAboutUniversity) {
     this.likedMostAboutUniversity = likedMostAboutUniversity;
   }
 
@@ -169,7 +169,7 @@ public class SurveyTableEntity {
     return "SurveyTableEntity [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName
       + ", streetAddress=" + streetAddress + ", city=" + city + ", zip=" + zip + ", state=" + state
       + ", telephoneNo=" + telephoneNo + ", email=" + email + ", dateOfSurvey=" + dateOfSurvey
-      + ", likedMostAboutUniversity=" + likedMostAboutUniversity.toString() + ", recommendLikelihood="
+      + ", likedMostAboutUniversity=" + likedMostAboutUniversity + ", recommendLikelihood="
       + recommendLikelihood + ", moreFeedback=" + moreFeedback
       + "]";
   }

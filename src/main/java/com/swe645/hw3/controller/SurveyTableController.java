@@ -33,7 +33,7 @@ public class SurveyTableController {
 		this.surveyTableService = surveyTableService;
 	}
 
-	@GetMapping
+	@GetMapping("/getAllSurveyEntries")
 	public ResponseEntity<List<SurveyTableEntity>> getAllSurveyEntries() {
 		List<SurveyTableEntity> resp = surveyTableService.getAllSurveys();
 		return new ResponseEntity<List<SurveyTableEntity>>(resp, HttpStatus.OK);
