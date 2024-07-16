@@ -7,172 +7,180 @@ This model represents the entity of the backend for the survey_table table & all
 
 package com.swe645.hw3.model;
 
-import java.sql.Date;
-import java.util.List;
+import jakarta.persistence.*;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import java.sql.Date;
 
 
 @Entity
 @Table(name = "survey_table")
 public class SurveyTableEntity {
 
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-  @Column(name = "first_name", nullable = false)
-  private String firstName;
+    @Column(name = "first_name", nullable = false)
+    private String firstName;
 
-  @Column(name = "last_name", nullable = false)
-  private String lastName;
+    @Column(name = "last_name", nullable = false)
+    private String lastName;
 
-  @Column(name = "street_address", nullable = false)
-  private String streetAddress;
+    @Column(name = "street_address", nullable = false)
+    private String streetAddress;
 
-  @Column(name = "city", nullable = false)
-  private String city;
+    @Column(name = "city", nullable = false)
+    private String city;
 
-  @Column(name = "zip", nullable = false)
-  private int zip;
+    @Column(name = "zip", nullable = false)
+    private int zip;
 
-  @Column(name = "state", nullable = false)
-  private String state;
+    @Column(name = "state", nullable = false)
+    private String state;
 
-  @Column(name = "phone", nullable = false)
-  private String telephoneNo;
+    @Column(name = "phone", nullable = false)
+    private String telephoneNo;
 
-  @Column(name = "email", nullable = false)
-  private String email;
+    @Column(name = "email", nullable = false)
+    private String email;
 
-  @Column(name = "date", nullable = false)
-  private Date dateOfSurvey;
-  @Column(name = "likedMostAboutUniversity")
-  private String likedMostAboutUniversity;
-  @Column(name = "recommendLikelihood")
-  private String recommendLikelihood;
-  @Column(name = "moreFeedback")
-  private String moreFeedback;
+    @Column(name = "date", nullable = false)
+    private Date dateOfSurvey;
 
-  public Long getId() {
-    return id;
-  }
+    @Column(name = "liked_most_about_university")
+    private String likedMostAboutUniversity;
 
-  public void setId(Long id) {
-    this.id = id;
-  }
+    @Column(name = "how_became_interested")
+    private String howBecameInterested;
 
-  public String getFirstName() {
-    return firstName;
-  }
+    @Column(name = "recommend_likelihood")
+    private String recommendLikelihood;
 
-  public void setFirstName(String firstName) {
-    this.firstName = firstName;
-  }
+    @Column(name = "more_feedback")
+    private String moreFeedback;
 
-  public String getLastName() {
-    return lastName;
-  }
+    public Long getId() {
+        return id;
+    }
 
-  public void setLastName(String lastName) {
-    this.lastName = lastName;
-  }
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-  public String getStreetAddress() {
-    return streetAddress;
-  }
+    public String getFirstName() {
+        return firstName;
+    }
 
-  public void setStreetAddress(String streetAddress) {
-    this.streetAddress = streetAddress;
-  }
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
-  public String getCity() {
-    return city;
-  }
+    public String getLastName() {
+        return lastName;
+    }
 
-  public void setCity(String city) {
-    this.city = city;
-  }
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
-  public int getZip() {
-    return zip;
-  }
+    public String getStreetAddress() {
+        return streetAddress;
+    }
 
-  public void setZip(int zip) {
-    this.zip = zip;
-  }
+    public void setStreetAddress(String streetAddress) {
+        this.streetAddress = streetAddress;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public int getZip() {
+        return zip;
+    }
+
+    public void setZip(int zip) {
+        this.zip = zip;
+    }
 
 
-  public String getState() {
-    return state;
-  }
+    public String getState() {
+        return state;
+    }
 
-  public void setState(String state) {
-    this.state = state;
-  }
+    public void setState(String state) {
+        this.state = state;
+    }
 
-  public String getTelephoneNo() {
-    return telephoneNo;
-  }
+    public String getTelephoneNo() {
+        return telephoneNo;
+    }
 
-  public void setTelephoneNo(String telephoneNo) {
-    this.telephoneNo = telephoneNo;
-  }
+    public void setTelephoneNo(String telephoneNo) {
+        this.telephoneNo = telephoneNo;
+    }
 
-  public Date getDateOfSurvey() {
-    return dateOfSurvey;
-  }
+    public Date getDateOfSurvey() {
+        return dateOfSurvey;
+    }
 
-  public void setDateOfSurvey(Date dateOfSurvey) {
-    this.dateOfSurvey = dateOfSurvey;
-  }
+    public void setDateOfSurvey(Date dateOfSurvey) {
+        this.dateOfSurvey = dateOfSurvey;
+    }
 
-  public String getEmail() {
-    return email;
-  }
+    public String getEmail() {
+        return email;
+    }
 
-  public void setEmail(String email) {
-    this.email = email;
-  }
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-  public String getLikedMostAboutUniversity() {
-    return likedMostAboutUniversity;
-  }
+    public String getHowBecameInterested() {
+        return howBecameInterested;
+    }
 
-  public void setLikedMostAboutUniversity(String likedMostAboutUniversity) {
-    this.likedMostAboutUniversity = likedMostAboutUniversity;
-  }
+    public void setHowBecameInterested(String howBecameInterested) {
+        this.howBecameInterested = howBecameInterested;
+    }
 
-  public String getRecommendLikelihood() {
-    return recommendLikelihood;
-  }
+    public String getLikedMostAboutUniversity() {
+        return likedMostAboutUniversity;
+    }
 
-  public void setRecommendLikelihood(String recommendLikelihood) {
-    this.recommendLikelihood = recommendLikelihood;
-  }
+    public void setLikedMostAboutUniversity(String likedMostAboutUniversity) {
+        this.likedMostAboutUniversity = likedMostAboutUniversity;
+    }
 
-  public String getMoreFeedback() {
-    return moreFeedback;
-  }
+    public String getRecommendLikelihood() {
+        return recommendLikelihood;
+    }
 
-  public void setMoreFeedback(String moreFeedback) {
-    this.moreFeedback = moreFeedback;
-  }
+    public void setRecommendLikelihood(String recommendLikelihood) {
+        this.recommendLikelihood = recommendLikelihood;
+    }
 
-  @Override
-  public String toString() {
-    return "SurveyTableEntity [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName
-      + ", streetAddress=" + streetAddress + ", city=" + city + ", zip=" + zip + ", state=" + state
-      + ", telephoneNo=" + telephoneNo + ", email=" + email + ", dateOfSurvey=" + dateOfSurvey
-      + ", likedMostAboutUniversity=" + likedMostAboutUniversity + ", recommendLikelihood="
-      + recommendLikelihood + ", moreFeedback=" + moreFeedback
-      + "]";
-  }
+    public String getMoreFeedback() {
+        return moreFeedback;
+    }
+
+    public void setMoreFeedback(String moreFeedback) {
+        this.moreFeedback = moreFeedback;
+    }
+
+    @Override
+    public String toString() {
+        return "SurveyTableEntity [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName
+                + ", streetAddress=" + streetAddress + ", city=" + city + ", zip=" + zip + ", state=" + state
+                + ", telephoneNo=" + telephoneNo + ", email=" + email + ", dateOfSurvey=" + dateOfSurvey
+                + ", likedMostAboutUniversity=" + likedMostAboutUniversity + ", recommendLikelihood="
+                + recommendLikelihood + ", moreFeedback=" + moreFeedback
+                + "]";
+    }
 
 
 }
