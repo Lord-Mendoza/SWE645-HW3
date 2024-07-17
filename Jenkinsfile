@@ -18,16 +18,14 @@ pipeline {
         IMAGE_TAG = 'latest'
     }
 
-    tools {
-        maven 'Maven 3.9.8'
-    }
-
     stages {
         stage('Checkout, Build, & Login') {
             steps {
                 checkout scm
                 sh 'rm -rf /target/*.war'
-                sh 'mvn clean package'
+                withMaven {
+                    sh 'mvn clean package'
+                }
                 sh """
                         echo "${DOCKER_CREDENTIALS_PASS}" | docker login -u "${DOCKER_CREDENTIALS_ID}" --password-stdin
                     """
