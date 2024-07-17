@@ -23,9 +23,8 @@ pipeline {
             steps {
                 checkout scm
                 sh 'rm -rf /target/*.war'
-                withMaven {
-                    sh "mvn clean package"
-                }
+                def maven = tool name: '3.9.8', type: 'maven'
+                sh "${maven}/bin/mvn clean package"
                 sh """
                         echo "${DOCKER_CREDENTIALS_PASS}" | docker login -u "${DOCKER_CREDENTIALS_ID}" --password-stdin
                     """
