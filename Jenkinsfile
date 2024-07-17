@@ -24,7 +24,7 @@ pipeline {
                 checkout scm
                 sh 'rm -rf /target/*.war'
                 withMaven {
-                    sh 'mvn clean package'
+                    sh "mvn clean package"
                 }
                 sh """
                         echo "${DOCKER_CREDENTIALS_PASS}" | docker login -u "${DOCKER_CREDENTIALS_ID}" --password-stdin
