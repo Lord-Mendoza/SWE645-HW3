@@ -1,8 +1,8 @@
 /*
 Lord Mendoza
-SWE 645
+SWE 645 - HW 3
 
-This repository holds the connection between the service layer and the JPA repository.
+This repository holds the connection between the service layer and the JPA repository/RDS database.
  */
 
 package com.swe645.hw3.repository;

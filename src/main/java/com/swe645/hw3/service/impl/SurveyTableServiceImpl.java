@@ -1,10 +1,9 @@
 /*
 Lord Mendoza
-SWE 645
+SWE 645 - HW 3
 
-This class is the implementation of the interface of the service layer, where the individual queries
-are performed for retrieving list of saved surveys to db, and saving a row of survey data to table in the
-db.
+This class is the implementation of the service layer interface where the individual queries
+are performed for CRUD operations to the db.
  */
 
 package com.swe645.hw3.service.impl;

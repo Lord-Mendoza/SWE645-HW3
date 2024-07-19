@@ -1,8 +1,8 @@
 /*
 Lord Mendoza
-SWE 645
+SWE 645 - HW 3
 
-This model represents the entity of the backend for the survey_table table & all its columns/column-types.
+The following model represents the entity of the backend for the survey_table table & all its columns/column-types.
  */
 
 package com.swe645.hw3.model;

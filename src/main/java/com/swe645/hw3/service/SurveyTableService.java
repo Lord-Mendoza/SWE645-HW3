@@ -1,8 +1,8 @@
 /*
 Lord Mendoza
-SWE 645
+SWE 645 - HW 3
 
-This interface holds the methods for the service layer for handling the API requests from controller.
+This service interface holds the methods for the service layer for handling the API requests from controller.
  */
 
 package com.swe645.hw3.service;

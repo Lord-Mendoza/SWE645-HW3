@@ -1,8 +1,8 @@
 /*
 Lord Mendoza
-SWE 645
+SWE 645 - HW 3
 
-This class is the main entrypoint of springboot.
+This class is the main entrypoint of springboot and initializes the servlet for when tomcat invokes it.
  */
 
 package com.swe645.hw3;

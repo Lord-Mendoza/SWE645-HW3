@@ -1,8 +1,8 @@
 /*
 Lord Mendoza
-SWE 645
+SWE 645 - HW 3
 
-This controller is the entry point for the REST APIs that takes the GET/POST requests from frontend, and
+This controller is the entry point for the REST APIs that takes the GET/POST/DELETE/etc. requests from frontend, and
 passes the work to service layer.
  */
 
